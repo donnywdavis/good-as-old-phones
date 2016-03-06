@@ -9,5 +9,5 @@
 import UIKit
 
 class Order: NSObject {
-    var product: [Product]?
+    var product: Product?
 }
