@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="L3J-rj-m2Z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="v0R-rc-ojC">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -47,7 +47,7 @@
             </objects>
             <point key="canvasLocation" x="924.5" y="484.5"/>
         </scene>
-        <!--Contact View Controller-->
+        <!--Contact-->
         <scene sceneID="mlf-97-2Is">
             <objects>
                 <viewController id="exu-j0-xbc" customClass="ContactViewController" customModule="GoodAsOldPhones" customModuleProvider="target" sceneMemberID="viewController">
@@ -60,6 +60,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Contact" image="icon-tabbar-contact" id="P8C-95-gOS"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="scrollView" destination="bPT-Sa-XdO" id="HbF-ob-uzU"/>
@@ -135,7 +136,7 @@
                     </subviews>
                 </scrollView>
             </objects>
-            <point key="canvasLocation" x="412.5" y="-267.5"/>
+            <point key="canvasLocation" x="-116.5" y="-311.5"/>
         </scene>
         <!--Products Table View Controller-->
         <scene sceneID="jJw-6t-kvz">
@@ -170,10 +171,84 @@
             </objects>
             <point key="canvasLocation" x="412.5" y="484.5"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Cart-->
+        <scene sceneID="lLx-CL-Oc2">
+            <objects>
+                <tableViewController id="dYm-L5-JBX" customClass="CartTableViewController" customModule="GoodAsOldPhones" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fKp-xn-n5F">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CartCell" id="oV5-Ra-zP2">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oV5-Ra-zP2" id="LcM-v0-iB7">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dYm-L5-JBX" id="n1d-EW-qCc"/>
+                            <outlet property="delegate" destination="dYm-L5-JBX" id="ORq-6v-JCu"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Cart" image="icon-tabbar-cart" id="QlR-On-oRL"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="headerView" destination="bnM-rN-UmB" id="G50-2L-iNT"/>
+                        <outlet property="totalLabel" destination="Oks-w8-wCI" id="aF4-c1-mFm"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q1G-kh-Ihe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="bnM-rN-UmB">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndC-eF-ffi">
+                            <rect key="frame" x="98" y="59" width="43" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calculated Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oks-w8-wCI">
+                            <rect key="frame" x="149" y="59" width="128" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="-116.5" y="1350.5"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="5ST-SO-BkW">
+            <objects>
+                <tabBarController id="v0R-rc-ojC" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="v7D-h3-pW3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="L3J-rj-m2Z" kind="relationship" relationship="viewControllers" id="sN9-zk-bFW"/>
+                        <segue destination="exu-j0-xbc" kind="relationship" relationship="viewControllers" id="fTS-Pq-FX5"/>
+                        <segue destination="dYm-L5-JBX" kind="relationship" relationship="viewControllers" id="EoB-P3-d3R"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kT8-s4-Pr2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-936.5" y="484.5"/>
+        </scene>
+        <!--Store-->
         <scene sceneID="xh6-ho-8PF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="L3J-rj-m2Z" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Store" image="icon-tabbar-store" id="oQl-PO-Sx7"/>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ppd-bN-Yca">
@@ -196,5 +271,8 @@
         <image name="icon-about-email" width="34" height="34"/>
         <image name="icon-about-phone" width="34" height="34"/>
         <image name="icon-about-website" width="34" height="34"/>
+        <image name="icon-tabbar-cart" width="24" height="19"/>
+        <image name="icon-tabbar-contact" width="29" height="19"/>
+        <image name="icon-tabbar-store" width="34" height="19"/>
     </resources>
 </document>
