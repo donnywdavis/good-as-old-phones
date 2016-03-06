@@ -24,16 +24,16 @@ class CartTableViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        let product = Product()
-        product.name = "1907 Wall Set"
-        product.productImage = "phone-fullscreen1"
-        product.cellImage = "image-cell1"
-        product.price = 59.99
+        // Read our existing orders
+        ordersInCart = Orders.readOrdersFromArchive()
+        if ordersInCart == nil {
+            ordersInCart = []
+        }
         
-        let order = Order()
-        order.product = product
+        // Reload the data to display in the table view
+        tableView.reloadData()
         
-        ordersInCart = [order]
+        // Update our order total
         updateTotal()
     }
 
@@ -62,6 +62,12 @@ class CartTableViewController: UITableViewController {
             // Delete the row from the data source
             ordersInCart?.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            
+            // Save the remaining orders
+            if let orders = ordersInCart {
+                Orders.saveOrdersToArchive(orders)
+            }
+            
             updateTotal()
         }
     }

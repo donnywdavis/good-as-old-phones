@@ -36,6 +36,23 @@ class ProductViewController: UIViewController {
             return
         }
         
+        // Create an order
+        let order = Order()
+        order.product = product
+        
+        // Get any existing orders and create empty array if none are found
+        var ordersInCart = Orders.readOrdersFromArchive()
+        if ordersInCart == nil {
+            ordersInCart = []
+        }
+        // Add the new order to the orders array
+        ordersInCart?.append(order)
+        // Save the orders
+        if let orders = ordersInCart {
+            Orders.saveOrdersToArchive(orders)
+        }
+        
+        
         // Create an alert when the add to cart button
         let alertController = UIAlertController(title: "Added to Cart", message: "You added \(name) to the cart and it costs $\(price)", preferredStyle: UIAlertControllerStyle.Alert)
         alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
