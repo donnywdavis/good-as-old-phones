@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		41FCE8171C8B3D4200F728C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FCE8161C8B3D4200F728C2 /* AppDelegate.swift */; };
-		41FCE8191C8B3D4200F728C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FCE8181C8B3D4200F728C2 /* ViewController.swift */; };
 		41FCE81C1C8B3D4200F728C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41FCE81A1C8B3D4200F728C2 /* Main.storyboard */; };
 		41FCE81E1C8B3D4200F728C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41FCE81D1C8B3D4200F728C2 /* Assets.xcassets */; };
 		41FCE8211C8B3D4200F728C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41FCE81F1C8B3D4200F728C2 /* LaunchScreen.storyboard */; };
+		41FCE8291C8B42B300F728C2 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FCE8281C8B42B300F728C2 /* ProductViewController.swift */; };
+		41FCE82B1C8B6D0100F728C2 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FCE82A1C8B6D0100F728C2 /* ContactViewController.swift */; };
+		41FCE82D1C8B767C00F728C2 /* ProductsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FCE82C1C8B767C00F728C2 /* ProductsTableViewController.swift */; };
+		41FCE82F1C8BA58900F728C2 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FCE82E1C8BA58900F728C2 /* Product.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		41FCE8131C8B3D4200F728C2 /* GoodAsOldiPhones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodAsOldiPhones.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		41FCE8131C8B3D4200F728C2 /* GoodAsOldPhones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodAsOldPhones.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41FCE8161C8B3D4200F728C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		41FCE8181C8B3D4200F728C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		41FCE81B1C8B3D4200F728C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		41FCE81D1C8B3D4200F728C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41FCE8201C8B3D4200F728C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		41FCE8221C8B3D4200F728C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41FCE8281C8B42B300F728C2 /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		41FCE82A1C8B6D0100F728C2 /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		41FCE82C1C8B767C00F728C2 /* ProductsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsTableViewController.swift; sourceTree = "<group>"; };
+		41FCE82E1C8BA58900F728C2 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +44,7 @@
 		41FCE80A1C8B3D4200F728C2 = {
 			isa = PBXGroup;
 			children = (
-				41FCE8151C8B3D4200F728C2 /* GoodAsOldiPhones */,
+				41FCE8151C8B3D4200F728C2 /* GoodAsOldPhones */,
 				41FCE8141C8B3D4200F728C2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,30 +52,34 @@
 		41FCE8141C8B3D4200F728C2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				41FCE8131C8B3D4200F728C2 /* GoodAsOldiPhones.app */,
+				41FCE8131C8B3D4200F728C2 /* GoodAsOldPhones.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		41FCE8151C8B3D4200F728C2 /* GoodAsOldiPhones */ = {
+		41FCE8151C8B3D4200F728C2 /* GoodAsOldPhones */ = {
 			isa = PBXGroup;
 			children = (
 				41FCE8161C8B3D4200F728C2 /* AppDelegate.swift */,
-				41FCE8181C8B3D4200F728C2 /* ViewController.swift */,
 				41FCE81A1C8B3D4200F728C2 /* Main.storyboard */,
 				41FCE81D1C8B3D4200F728C2 /* Assets.xcassets */,
 				41FCE81F1C8B3D4200F728C2 /* LaunchScreen.storyboard */,
 				41FCE8221C8B3D4200F728C2 /* Info.plist */,
+				41FCE8281C8B42B300F728C2 /* ProductViewController.swift */,
+				41FCE82A1C8B6D0100F728C2 /* ContactViewController.swift */,
+				41FCE82C1C8B767C00F728C2 /* ProductsTableViewController.swift */,
+				41FCE82E1C8BA58900F728C2 /* Product.swift */,
 			);
-			path = GoodAsOldiPhones;
+			name = GoodAsOldPhones;
+			path = GoodAsOldPhones;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		41FCE8121C8B3D4200F728C2 /* GoodAsOldiPhones */ = {
+		41FCE8121C8B3D4200F728C2 /* GoodAsOldPhones */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 41FCE8251C8B3D4200F728C2 /* Build configuration list for PBXNativeTarget "GoodAsOldiPhones" */;
+			buildConfigurationList = 41FCE8251C8B3D4200F728C2 /* Build configuration list for PBXNativeTarget "GoodAsOldPhones" */;
 			buildPhases = (
 				41FCE80F1C8B3D4200F728C2 /* Sources */,
 				41FCE8101C8B3D4200F728C2 /* Frameworks */,
@@ -79,9 +89,9 @@
 			);
 			dependencies = (
 			);
-			name = GoodAsOldiPhones;
-			productName = GoodAsOldiPhones;
-			productReference = 41FCE8131C8B3D4200F728C2 /* GoodAsOldiPhones.app */;
+			name = GoodAsOldPhones;
+			productName = GoodAsOldPhones;
+			productReference = 41FCE8131C8B3D4200F728C2 /* GoodAsOldPhones.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -100,7 +110,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 41FCE80E1C8B3D4200F728C2 /* Build configuration list for PBXProject "GoodAsOldiPhones" */;
+			buildConfigurationList = 41FCE80E1C8B3D4200F728C2 /* Build configuration list for PBXProject "GoodAsOldPhones" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -113,7 +123,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				41FCE8121C8B3D4200F728C2 /* GoodAsOldiPhones */,
+				41FCE8121C8B3D4200F728C2 /* GoodAsOldPhones */,
 			);
 		};
 /* End PBXProject section */
@@ -136,8 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41FCE8191C8B3D4200F728C2 /* ViewController.swift in Sources */,
+				41FCE8291C8B42B300F728C2 /* ProductViewController.swift in Sources */,
+				41FCE82D1C8B767C00F728C2 /* ProductsTableViewController.swift in Sources */,
+				41FCE82F1C8BA58900F728C2 /* Product.swift in Sources */,
 				41FCE8171C8B3D4200F728C2 /* AppDelegate.swift in Sources */,
+				41FCE82B1C8B6D0100F728C2 /* ContactViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,10 +261,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = GoodAsOldiPhones/Info.plist;
+				INFOPLIST_FILE = GoodAsOldPhones/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.donnydavis.GoodAsOldiPhones;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.donnydavis.GoodAsOldPhones;
+				PRODUCT_NAME = GoodAsOldPhones;
 			};
 			name = Debug;
 		};
@@ -259,17 +272,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = GoodAsOldiPhones/Info.plist;
+				INFOPLIST_FILE = GoodAsOldPhones/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.donnydavis.GoodAsOldiPhones;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.donnydavis.GoodAsOldPhones;
+				PRODUCT_NAME = GoodAsOldPhones;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		41FCE80E1C8B3D4200F728C2 /* Build configuration list for PBXProject "GoodAsOldiPhones" */ = {
+		41FCE80E1C8B3D4200F728C2 /* Build configuration list for PBXProject "GoodAsOldPhones" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				41FCE8231C8B3D4200F728C2 /* Debug */,
@@ -278,13 +291,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		41FCE8251C8B3D4200F728C2 /* Build configuration list for PBXNativeTarget "GoodAsOldiPhones" */ = {
+		41FCE8251C8B3D4200F728C2 /* Build configuration list for PBXNativeTarget "GoodAsOldPhones" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				41FCE8261C8B3D4200F728C2 /* Debug */,
 				41FCE8271C8B3D4200F728C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
