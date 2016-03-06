@@ -32,12 +32,12 @@ class ProductViewController: UIViewController {
     
     @IBAction func addToCartPressed(sender: UIButton) {
         // Make sure that we have a product and product name set
-        guard let product = product, let name = product.name else {
+        guard let product = product, let name = product.name, let price = product.price else {
             return
         }
         
         // Create an alert when the add to cart button
-        let alertController = UIAlertController(title: "Added to Cart", message: "You added \(name) to the cart", preferredStyle: UIAlertControllerStyle.Alert)
+        let alertController = UIAlertController(title: "Added to Cart", message: "You added \(name) to the cart and it costs $\(price)", preferredStyle: UIAlertControllerStyle.Alert)
         alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
         
         // Display the alert
